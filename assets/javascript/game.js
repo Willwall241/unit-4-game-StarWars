@@ -1,6 +1,10 @@
 var gameOn = true;
 var storedPower = 0;
 var defenderEmpty = true;
+var currentHp = 0;
+var enemyHp = 0;
+var enemyKill = 0;
+
 
 var availableChar = [
 
