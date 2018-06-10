@@ -363,7 +363,7 @@ $("#attack").on("click", function () {
 
 function checkWin() {
 
-  if (enemyHp <= 0 && enemyKill < 2 ) {
+  if (enemyHp <= 0 && enemyKill < 2 && currentHp > 0) {
 
     $(".target").remove();
     defenderEmpty = true;
