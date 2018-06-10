@@ -234,136 +234,146 @@ $("#charFour").on("click", function () {
 
 $("#attack").on("click", function () {
 
-  if (fighter == "Mace" && defName == "Vader" && gameOn) {
-
-    currentHp = currentHp - Vader.counter;
-    $(".mace-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".vader-hp").text(enemyHp);
-    checkWin();
+  if ($("#defender").html().length === 0 && $("#enemies").html().length > 0) {
+    $("#fight-text").text("Pick another enemy to fight");
 
   }
-  else if (fighter == "Mace" && defName == "Yoda" && gameOn) {
+  else {
 
-    currentHp = currentHp - Yoda.counter;
-    $(".mace-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".yoda-hp").text(enemyHp);
-    checkWin();
+    if (fighter == "Mace" && defName == "Vader" && gameOn) {
 
+      currentHp = currentHp - Vader.counter;
+      $(".mace-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".vader-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Mace" && defName == "Yoda" && gameOn) {
+
+      currentHp = currentHp - Yoda.counter;
+      $(".mace-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".yoda-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Mace" && defName == "Dooku" && gameOn) {
+
+      currentHp = currentHp - Dooku.counter;
+      $(".mace-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".dooku-hp").text(enemyHp);
+      checkWin();
+
+    }
+
+    if (fighter == "Vader" && defName == "Mace" && gameOn) {
+
+      currentHp = currentHp - Mace.counter;
+      $(".vader-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".mace-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Vader" && defName == "Yoda" && gameOn) {
+
+      currentHp = currentHp - Yoda.counter;
+      $(".vader-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".yoda-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Vader" && defName == "Dooku" && gameOn) {
+
+      currentHp = currentHp - Dooku.counter;
+      $(".vader-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".dooku-hp").text(enemyHp);
+      checkWin();
+
+    }
+
+    if (fighter == "Yoda" && defName == "Mace" && gameOn) {
+
+      currentHp = currentHp - Mace.counter;
+      $(".yoda-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".mace-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Yoda" && defName == "Vader" && gameOn) {
+
+      currentHp = currentHp - Vader.counter;
+      $(".yoda-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".vader-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Yoda" && defName == "Dooku" && gameOn) {
+
+      currentHp = currentHp - Dooku.counter;
+      $(".yoda-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".dooku-hp").text(enemyHp);
+      checkWin();
+
+    }
+
+    if (fighter == "Dooku" && defName == "Mace" && gameOn) {
+
+      currentHp = currentHp - Mace.counter;
+      $(".dooku-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".mace-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Dooku" && defName == "Yoda" && gameOn) {
+
+      currentHp = currentHp - Yoda.counter;
+      $(".dooku-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".yoda-hp").text(enemyHp);
+      checkWin();
+
+    }
+    else if (fighter == "Dooku" && defName == "Vader" && gameOn) {
+
+      currentHp = currentHp - Vader.counter;
+      $(".dooku-hp").text(currentHp);
+      currentAttack = currentAttack + Mace.attack;
+      enemyHp = enemyHp - currentAttack;
+      $(".vader-hp").text(enemyHp);
+      checkWin();
+
+    }
   }
-  else if (fighter == "Mace" && defName == "Dooku" && gameOn) {
-
-    currentHp = currentHp - Dooku.counter;
-    $(".mace-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".dooku-hp").text(enemyHp);
-    checkWin();
-
-  }
-
-  if (fighter == "Vader" && defName == "Mace" && gameOn) {
-
-    currentHp = currentHp - Mace.counter;
-    $(".vader-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".mace-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Vader" && defName == "Yoda" && gameOn) {
-
-    currentHp = currentHp - Yoda.counter;
-    $(".vader-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".yoda-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Vader" && defName == "Dooku" && gameOn) {
-
-    currentHp = currentHp - Dooku.counter;
-    $(".vader-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".dooku-hp").text(enemyHp);
-    checkWin();
-
-  }
-
-  if (fighter == "Yoda" && defName == "Mace" && gameOn) {
-
-    currentHp = currentHp - Mace.counter;
-    $(".yoda-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".mace-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Yoda" && defName == "Vader" && gameOn) {
-
-    currentHp = currentHp - Vader.counter;
-    $(".yoda-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".vader-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Yoda" && defName == "Dooku" && gameOn) {
-
-    currentHp = currentHp - Dooku.counter;
-    $(".yoda-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".dooku-hp").text(enemyHp);
-    checkWin();
-
-  }
-
-  if (fighter == "Dooku" && defName == "Mace" && gameOn) {
-
-    currentHp = currentHp - Mace.counter;
-    $(".dooku-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".mace-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Dooku" && defName == "Yoda" && gameOn) {
-
-    currentHp = currentHp - Yoda.counter;
-    $(".dooku-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".yoda-hp").text(enemyHp);
-    checkWin();
-
-  }
-  else if (fighter == "Dooku" && defName == "Vader" && gameOn) {
-
-    currentHp = currentHp - Vader.counter;
-    $(".dooku-hp").text(currentHp);
-    currentAttack = currentAttack + Mace.attack;
-    enemyHp = enemyHp - currentAttack;
-    $(".vader-hp").text(enemyHp);
-    checkWin();
-
-  }
-
 });
 
 
 function checkWin() {
 
-  if ((currentHp <=0)) {
+  if ($("#defender").is(":empty") && $("#enemies").html().lenth > 0) {
+    $("#fight-text").text("Pick another enemy to fight");
+
+  }
+  else if ((currentHp <= 0)) {
     $("#fight-text").text("You Lose, restart the game and try again!");
     gameOn = false;
     $("#reset").show();
@@ -376,7 +386,7 @@ function checkWin() {
     enemyKill++;
 
   }
-  else if (currentHp > 0 && enemyHp < 0 && enemyKill === 2) {
+  else if (currentHp > 0 && enemyHp < 0 && $("#enemies").is(":empty")) {
     $(".target").remove();
     $("#fight-text").text("You Won, good job restart game to try again");
     gameOn = false;
@@ -386,7 +396,7 @@ function checkWin() {
 
 };
 
-$("#reset").on("click", function(){
+$("#reset").on("click", function () {
 
   location.reload();
 
