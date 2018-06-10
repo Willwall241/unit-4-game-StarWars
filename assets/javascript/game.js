@@ -363,7 +363,12 @@ $("#attack").on("click", function () {
 
 function checkWin() {
 
-  if (enemyHp <= 0 && enemyKill < 2 && currentHp > 0) {
+  if ((currentHp <=0)) {
+    $("#fight-text").text("You Lose, restart the game and try again!");
+    gameOn = false;
+    $("#reset").show();
+  }
+  else if (enemyHp < 0 && enemyKill < 2 && currentHp > 0) {
 
     $(".target").remove();
     defenderEmpty = true;
@@ -371,12 +376,7 @@ function checkWin() {
     enemyKill++;
 
   }
-  else if ((currentHp <=0 && enemyKill !== 3)) {
-    $("#fight-text").text("You Lose, restart the game and try again!");
-    gameOn = false;
-    $("#reset").show();
-  }
-  else if (currentHp >= 0 && enemyHp <=0 && enemyKill === 2) {
+  else if (currentHp > 0 && enemyHp < 0 && enemyKill === 2) {
     $(".target").remove();
     $("#fight-text").text("You Won, good job restart game to try again");
     gameOn = false;
